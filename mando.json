@@ -1,0 +1,551 @@
+{
+    "warehouse": "STG_CANVAS_CD2",
+    "tables": {
+      "CANVAS_ACCESS_TOKENS": {
+        "CREATED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN AN `ACCESS_TOKENS` RECORD WAS CREATED."
+        },
+        "DEVELOPER_KEY_ID": {
+          "type": "Number",
+          "description": "THE UNIQUE IDENTIFIER OF A DEVELOPER KEY."
+        },
+        "EXPIRES_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "THE EXPIRATION DATE/TIME FOR THIS TOKEN. THIS MAY BE A NULL VALUE."
+        },
+        "ID": {
+          "type": "Number",
+          "description": "THE UNIQUE IDENTIFIER FOR AN ACCESS TOKEN RECORD."
+        },
+        "IND_LAST": {
+          "type": "Number",
+          "description": "Index for tracking."
+        },
+        "LAST_USED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF LAST ACCESS USING THIS ACCESS TOKEN."
+        },
+        "METADATA_FILENAME": {
+          "type": "Varchar",
+          "description": "Filename for metadata."
+        },
+        "METADATA_FILE_LAST_MODIFIED": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of when metadata file was last modified."
+        },
+        "META_TS": {
+          "type": "Timestamp_NTZ",
+          "description": "Metadata timestamp."
+        },
+        "PURPOSE": {
+          "type": "Varchar",
+          "description": "FOR USER-GENERATED TOKENS, PURPOSE CAN BE MANUALLY SET."
+        },
+        "REAL_USER_ID": {
+          "type": "Number",
+          "description": "IF THE TOKEN WAS CREATED WHILE MASQUERADING, THIS IS THE REAL USER DOING THE MASQUERADING."
+        },
+        "SCOPES": {
+          "type": "Varchar",
+          "description": "A LIST OF SCOPES THAT CAN BE APPLIED TO ACCESS TOKENS."
+        },
+        "TS_CARGA": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of data load."
+        },
+        "TS_PROCESSAMENT": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of data processing."
+        },
+        "UPDATED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN AN `ACCESS_TOKENS` RECORD WAS UPDATED."
+        },
+        "USER_ID": {
+          "type": "Number",
+          "description": "THE UNIQUE ID OF THE USER THE TOKEN ACTS AS."
+        },
+        "WORKFLOW_STATE": {
+          "type": "Varchar",
+          "description": "THE CURRENT STATE OF THE ACCESS TOKEN RECORD."
+        }
+      },
+      "CANVAS_ACCESS_TOKENS_HIST": {
+        "CREATED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN AN `ACCESS_TOKENS` RECORD WAS CREATED."
+        },
+        "DEVELOPER_KEY_ID": {
+          "type": "Number",
+          "description": "THE UNIQUE IDENTIFIER OF A DEVELOPER KEY."
+        },
+        "EXPIRES_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "THE EXPIRATION DATE/TIME FOR THIS TOKEN. THIS MAY BE A NULL VALUE."
+        },
+        "ID": {
+          "type": "Number",
+          "description": "THE UNIQUE IDENTIFIER FOR AN ACCESS TOKEN RECORD."
+        },
+        "IND_LAST": {
+          "type": "Number",
+          "description": "Index for tracking."
+        },
+        "LAST_USED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF LAST ACCESS USING THIS ACCESS TOKEN."
+        },
+        "METADATA_FILENAME": {
+          "type": "Varchar",
+          "description": "Filename for metadata."
+        },
+        "METADATA_FILE_LAST_MODIFIED": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of when metadata file was last modified."
+        },
+        "META_TS": {
+          "type": "Timestamp_NTZ",
+          "description": "Metadata timestamp."
+        },
+        "PURPOSE": {
+          "type": "Varchar",
+          "description": "FOR USER-GENERATED TOKENS, PURPOSE CAN BE MANUALLY SET."
+        },
+        "REAL_USER_ID": {
+          "type": "Number",
+          "description": "IF THE TOKEN WAS CREATED WHILE MASQUERADING, THIS IS THE REAL USER DOING THE MASQUERADING."
+        },
+        "SCOPES": {
+          "type": "Varchar",
+          "description": "A LIST OF SCOPES THAT CAN BE APPLIED TO ACCESS TOKENS."
+        },
+        "TS_CARGA": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of data load."
+        },
+        "TS_PROCESSAMENT": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of data processing."
+        },
+        "UPDATED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN AN `ACCESS_TOKENS` RECORD WAS UPDATED."
+        },
+        "USER_ID": {
+          "type": "Number",
+          "description": "THE UNIQUE ID OF THE USER THE TOKEN ACTS AS."
+        },
+        "WORKFLOW_STATE": {
+          "type": "Varchar",
+          "description": "THE CURRENT STATE OF THE ACCESS TOKEN RECORD."
+        }
+      },
+      "CANVAS_ACCOUNTS": {
+        "CONSORTIUM_PARENT_ACCOUNT_ID": {
+          "type": "Number",
+          "description": "THE ROOT ACCOUNT OF THE CONSORTIUM ACCOUNT, IF THIS ROOT ACCOUNT IS PART OF A CONSORTIUM."
+        },
+        "COURSE_TEMPLATE_ID": {
+          "type": "Number",
+          "description": "THE COURSE SELECTED AS A TEMPLATE FOR NEW COURSES CREATED IN THIS ACCOUNT. 0 IF A TEMPLATE SHOULD NOT BE USED."
+        },
+        "CREATED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN THE ACCOUNT WAS CREATED."
+        },
+        "CURRENT_SIS_BATCH_ID": {
+          "type": "Number",
+          "description": "THE ID OF THE CURRENTLY PROCESSING SIS (STUDENT INFORMATION SYSTEM) BATCH."
+        },
+        "DEFAULT_GROUP_STORAGE_QUOTA": {
+          "type": "Number",
+          "description": "THE STORAGE QUOTA FOR A GROUP IN THE ACCOUNT IN MEGABYTES."
+        },
+        "DEFAULT_LOCALE": {
+          "type": "Varchar",
+          "description": "LANGUAGE FOR THE ACCOUNT."
+        },
+        "DEFAULT_STORAGE_QUOTA": {
+          "type": "Number",
+          "description": "THE STORAGE QUOTA FOR CHILDREN ACCOUNTS IN MEGABYTES."
+        },
+        "DEFAULT_TIME_ZONE": {
+          "type": "Varchar",
+          "description": "THE DEFAULT TIME ZONE OF THE ACCOUNT."
+        },
+        "DEFAULT_USER_STORAGE_QUOTA": {
+          "type": "Number",
+          "description": "THE DEFAULT STORAGE QUOTA FOR USERS IN THE ACCOUNT IN MEGABYTES."
+        },
+        "DELETED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN THE ACCOUNT WAS DELETED."
+        },
+        "ID": {
+          "type": "Number",
+          "description": "THE ID OF THE ACCOUNT OBJECT."
+        },
+        "IND_LAST": {
+          "type": "Number",
+          "description": "Index for tracking."
+        },
+        "INTEGRATION_ID": {
+          "type": "Varchar",
+          "description": "THE ACCOUNT'S IDENTIFIER IN THE STUDENT INFORMATION SYSTEM."
+        },
+        "LTI_CONTEXT_ID": {
+          "type": "Varchar",
+          "description": "UUID OF THE CANVAS CONTEXT IN LTI STANDARD."
+        },
+        "METADATA_FILENAME": {
+          "type": "Varchar",
+          "description": "Filename for metadata."
+        },
+        "METADATA_FILE_LAST_MODIFIED": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of when metadata file was last modified."
+        },
+        "META_TS": {
+          "type": "Timestamp_NTZ",
+          "description": "Metadata timestamp."
+        },
+        "NAME": {
+          "type": "Varchar",
+          "description": "THE DISPLAY NAME OF THE ACCOUNT."
+        },
+        "PARENT_ACCOUNT_ID": {
+          "type": "Number",
+          "description": "THE ACCOUNT'S PARENT ID, OR NULL IF THIS IS THE ROOT ACCOUNT."
+        },
+        "SIS_SOURCE_ID": {
+          "type": "Varchar",
+          "description": "CORRELATED ID FOR THE RECORD FOR THIS COURSE IN THE SIS SYSTEM."
+        },
+        "STORAGE_QUOTA": {
+          "type": "Number",
+          "description": "THE STORAGE QUOTE FOR THE ACCOUNT, IN MEGABYTES."
+        }
+      },
+      "CANVAS_ACCOUNTS_HIST": {
+        "CONSORTIUM_PARENT_ACCOUNT_ID": {
+          "type": "Number",
+          "description": "THE ROOT ACCOUNT OF THE CONSORTIUM ACCOUNT, IF THIS ROOT ACCOUNT IS PART OF A CONSORTIUM."
+        },
+        "COURSE_TEMPLATE_ID": {
+          "type": "Number",
+          "description": "THE COURSE SELECTED AS A TEMPLATE FOR NEW COURSES CREATED IN THIS ACCOUNT."
+        },
+        "CREATED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN THE ACCOUNT WAS CREATED."
+        },
+        "CURRENT_SIS_BATCH_ID": {
+          "type": "Number",
+          "description": "THE ID OF THE CURRENTLY PROCESSING SIS (STUDENT INFORMATION SYSTEM) BATCH."
+        },
+        "DEFAULT_GROUP_STORAGE_QUOTA": {
+          "type": "Number",
+          "description": "THE STORAGE QUOTA FOR A GROUP IN THE ACCOUNT IN MEGABYTES."
+        },
+        "DEFAULT_LOCALE": {
+          "type": "Varchar",
+          "description": "LANGUAGE FOR THE ACCOUNT."
+        },
+        "DEFAULT_STORAGE_QUOTA": {
+          "type": "Number",
+          "description": "THE STORAGE QUOTA FOR CHILDREN ACCOUNTS IN MEGABYTES."
+        },
+        "DEFAULT_TIME_ZONE": {
+          "type": "Varchar",
+          "description": "THE DEFAULT TIME ZONE OF THE ACCOUNT."
+        },
+        "DEFAULT_USER_STORAGE_QUOTA": {
+          "type": "Number",
+          "description": "THE DEFAULT STORAGE QUOTA FOR USERS IN THE ACCOUNT IN MEGABYTES."
+        },
+        "DELETED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN THE ACCOUNT WAS DELETED."
+        },
+        "ID": {
+          "type": "Number",
+          "description": "THE ID OF THE ACCOUNT OBJECT."
+        },
+        "IND_LAST": {
+          "type": "Number",
+          "description": "Index for tracking."
+        },
+        "INTEGRATION_ID": {
+          "type": "Varchar",
+          "description": "THE ACCOUNT'S IDENTIFIER IN THE STUDENT INFORMATION SYSTEM."
+        },
+        "LTI_CONTEXT_ID": {
+          "type": "Varchar",
+          "description": "UUID OF THE CANVAS CONTEXT IN LTI STANDARD."
+        },
+        "METADATA_FILENAME": {
+          "type": "Varchar",
+          "description": "Filename for metadata."
+        },
+        "METADATA_FILE_LAST_MODIFIED": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of when metadata file was last modified."
+        },
+        "META_TS": {
+          "type": "Timestamp_NTZ",
+          "description": "Metadata timestamp."
+        },
+        "NAME": {
+          "type": "Varchar",
+          "description": "THE DISPLAY NAME OF THE ACCOUNT."
+        },
+        "PARENT_ACCOUNT_ID": {
+          "type": "Number",
+          "description": "THE ACCOUNT'S PARENT ID, OR NULL IF THIS IS THE ROOT ACCOUNT."
+        },
+        "SIS_SOURCE_ID": {
+          "type": "Varchar",
+          "description": "CORRELATED ID FOR THE RECORD FOR THIS COURSE IN THE SIS SYSTEM."
+        },
+        "STORAGE_QUOTA": {
+          "type": "Number",
+          "description": "THE STORAGE QUOTE FOR THE ACCOUNT, IN MEGABYTES."
+        }
+      },
+      "CANVAS_ACCOUNT_USERS": {
+        "ACCOUNT_ID": {
+          "type": "Number",
+          "description": "THE UNIQUE ID OF AN ACCOUNT."
+        },
+        "CREATED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN AN `ACCOUNT_USERS` RECORD WAS CREATED."
+        },
+        "ID": {
+          "type": "Number",
+          "description": "THE UNIQUE IDENTIFIER FOR THE USERS ACCOUNT ASSOCIATION RECORD."
+        },
+        "IND_LAST": {
+          "type": "Number",
+          "description": "Index for tracking."
+        },
+        "ROLE_ID": {
+          "type": "Number",
+          "description": "THE UNIQUE ID OF A ROLE."
+        },
+        "USER_ID": {
+          "type": "Number",
+          "description": "THE UNIQUE ID OF A USER."
+        },
+        "WORKFLOW_STATE": {
+          "type": "Varchar",
+          "description": "THE CURRENT STATE OF THE ACCOUNT USER RECORD."
+        },
+        "TS_CARGA": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of data load."
+        },
+        "TS_PROCESSAMENT": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of data processing."
+        },
+        "UPDATED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN AN `ACCOUNT_USERS` RECORD WAS UPDATED."
+        }
+      },
+      "CANVAS_ACCOUNT_USERS_HIST": {
+        "ACCOUNT_ID": {
+          "type": "Number",
+          "description": "THE UNIQUE ID OF AN ACCOUNT."
+        },
+        "CREATED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN AN `ACCOUNT_USERS` RECORD WAS CREATED."
+        },
+        "ID": {
+          "type": "Number",
+          "description": "THE UNIQUE IDENTIFIER FOR THE USERS ACCOUNT ASSOCIATION RECORD."
+        },
+        "IND_LAST": {
+          "type": "Number",
+          "description": "Index for tracking."
+        },
+        "ROLE_ID": {
+          "type": "Number",
+          "description": "THE UNIQUE ID OF A ROLE."
+        },
+        "USER_ID": {
+          "type": "Number",
+          "description": "THE UNIQUE ID OF A USER."
+        },
+        "WORKFLOW_STATE": {
+          "type": "Varchar",
+          "description": "THE CURRENT STATE OF THE ACCOUNT USER RECORD."
+        },
+        "TS_CARGA": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of data load."
+        },
+        "TS_PROCESSAMENT": {
+          "type": "Timestamp_NTZ",
+          "description": "Timestamp of data processing."
+        },
+        "UPDATED_AT": {
+          "type": "Timestamp_NTZ",
+          "description": "TIMESTAMP OF WHEN AN `ACCOUNT_USERS` RECORD WAS UPDATED."
+        },
+        
+        "CANVAS_ASSESSMENT_QUESTIONS": {
+            "ASSESSMENT_QUESTION_BANK_ID": {
+            "type": "Number",
+            "description": "THE UNIQUE IDENTIFIER FOR THE ASSESSMENT QUESTION BANK THIS QUESTION IS ASSOCIATED WITH."
+            },
+            "CONTEXT_ID": {
+            "type": "Number",
+            "description": "THE UNIQUE IDENTIFIER FOR THE QUESTION BANK'S CONTEXT (ACCOUNT OR COURSE). NO LONGER USED AS CANVAS DELEGATES TO `CONTEXT_ID` OF THE ASSOCIATED ASSESSMENTQUESTION."
+            },
+            "CONTEXT_TYPE": {
+            "type": "Varchar",
+            "description": "THE TYPE OF CONTEXT THE QUESTION BANK IS ASSOCIATED WITH. NO LONGER USED AS CANVAS DELEGATES TO THE CONTEXT OF THE ASSOCIATED ASSESSMENTQUESTION."
+            },
+            "CREATED_AT": {
+            "type": "Timestamp_NTZ",
+            "description": "TIME WHEN THE QUIZ QUESTION WAS CREATED."
+            },
+            "DELETED_AT": {
+            "type": "Timestamp_NTZ",
+            "description": "THE TIME THE QUESTION WAS DELETED. IF THE QUESTION HAS NOT BEEN DELETED THE VALUE WILL BE NULL."
+            },
+            "ID": {
+            "type": "Number",
+            "description": "THE UNIQUE IDENTIFIER FOR THE ASSESSMENT QUESTION."
+            },
+            "IND_LAST": {
+            "type": "Number",
+            "description": "Index for tracking."
+            },
+            "METADATA_FILENAME": {
+            "type": "Varchar",
+            "description": "Filename for metadata."
+            },
+            "METADATA_FILE_LAST_MODIFIED": {
+            "type": "Timestamp_NTZ",
+            "description": "Timestamp of when metadata file was last modified."
+            },
+            "META_TS": {
+            "type": "Timestamp_NTZ",
+            "description": "Metadata timestamp."
+            },
+            "MIGRATION_ID": {
+            "type": "Varchar",
+            "description": "THE UNIQUE IDENTIFIER OF THE MIGRATION THAT IMPORTED THIS ASSESSMENT QUESTION."
+            },
+            "NAME": {
+            "type": "Varchar",
+            "description": "NAME OF THE QUESTION."
+            },
+            "POSITION": {
+            "type": "Number",
+            "description": "THE POSITION OF THE QUESTION."
+            },
+            "QUESTION_DATA": {
+            "type": "Varchar",
+            "description": "A VARIETY OF QUESTION DATA RELATED POINTS."
+            },
+            "TS_CARGA": {
+            "type": "Timestamp_NTZ",
+            "description": "Timestamp of data load."
+            },
+            "TS_PROCESSAMENT": {
+            "type": "Timestamp_NTZ",
+            "description": "Timestamp of data processing."
+            },
+            "UPDATED_AT": {
+            "type": "Timestamp_NTZ",
+            "description": "TIME WHEN THE QUIZ QUESTION WAS LAST UPDATED."
+            },
+            "WORKFLOW_STATE": {
+            "type": "Varchar",
+            "description": "LIFE-CYCLE STATE FOR THE QUIZ QUESTION."
+            }
+        },
+        "CANVAS_ASSESSMENT_QUESTIONS_HIST": {
+            "ASSESSMENT_QUESTION_BANK_ID": {
+            "type": "Number",
+            "description": "THE UNIQUE IDENTIFIER FOR THE ASSESSMENT QUESTION BANK THIS QUESTION IS ASSOCIATED WITH."
+            },
+            "CONTEXT_ID": {
+            "type": "Number",
+            "description": "THE UNIQUE IDENTIFIER FOR THE QUESTION BANK'S CONTEXT (ACCOUNT OR COURSE). NO LONGER USED AS CANVAS DELEGATES TO `CONTEXT_ID` OF THE ASSOCIATED ASSESSMENTQUESTION."
+            },
+            "CONTEXT_TYPE": {
+            "type": "Varchar",
+            "description": "THE TYPE OF CONTEXT THE QUESTION BANK IS ASSOCIATED WITH. NO LONGER USED AS CANVAS DELEGATES TO THE CONTEXT OF THE ASSOCIATED ASSESSMENTQUESTION."
+            },
+            "CREATED_AT": {
+            "type": "Timestamp_NTZ",
+            "description": "TIME WHEN THE QUIZ QUESTION WAS CREATED."
+            },
+            "DELETED_AT": {
+            "type": "Timestamp_NTZ",
+            "description": "THE TIME THE QUESTION WAS DELETED. IF THE QUESTION HAS NOT BEEN DELETED THE VALUE WILL BE NULL."
+            },
+            "ID": {
+            "type": "Number",
+            "description": "THE UNIQUE IDENTIFIER FOR THE ASSESSMENT QUESTION."
+            },
+            "IND_LAST": {
+            "type": "Number",
+            "description": "Index for tracking."
+            },
+            "METADATA_FILENAME": {
+            "type": "Varchar",
+            "description": "Filename for metadata."
+            },
+            "METADATA_FILE_LAST_MODIFIED": {
+            "type": "Timestamp_NTZ",
+            "description": "Timestamp of when metadata file was last modified."
+            },
+            "META_TS": {
+            "type": "Timestamp_NTZ",
+            "description": "Metadata timestamp."
+            },
+            "MIGRATION_ID": {
+            "type": "Varchar",
+            "description": "THE UNIQUE IDENTIFIER OF THE MIGRATION THAT IMPORTED THIS ASSESSMENT QUESTION."
+            },
+            "NAME": {
+            "type": "Varchar",
+            "description": "NAME OF THE QUESTION."
+            },
+            "POSITION": {
+            "type": "Number",
+            "description": "THE POSITION OF THE QUESTION."
+            },
+            "QUESTION_DATA": {
+            "type": "Varchar",
+            "description": "A VARIETY OF QUESTION DATA RELATED POINTS."
+            },
+            "TS_CARGA": {
+            "type": "Timestamp_NTZ",
+            "description": "Timestamp of data load."
+            },
+            "TS_PROCESSAMENT": {
+            "type": "Timestamp_NTZ",
+            "description": "Timestamp of data processing."
+            },
+            "UPDATED_AT": {
+            "type": "Timestamp_NTZ",
+            "description": "TIME WHEN THE QUIZ QUESTION WAS LAST UPDATED."
+            },
+            "WORKFLOW_STATE": {
+            "type": "Varchar",
+            "description": "LIFE-CYCLE STATE FOR THE QUIZ QUESTION."
+            }
+        }
+        }
+        
+  
+  
